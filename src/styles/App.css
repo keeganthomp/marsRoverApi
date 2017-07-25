@@ -44,3 +44,21 @@
   margin: 2%;
 }
 
+.roverImg {
+  width: 500px;
+  margin: 0 auto;
+  margin-left: 12%;
+}
+
+.mainInput {
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.header {
+  margin: 0 auto;
+  width: 200px;
+  margin: 2%;
+
+}
+

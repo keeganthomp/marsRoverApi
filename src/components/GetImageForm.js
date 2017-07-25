@@ -29,7 +29,7 @@ export default class GetImageForm extends Component {
       .then(data => {
         let roverImage = data;
         this.setState({ images: roverImage.photos });
-        console.log("image STATE:", this.state.images);
+        // console.log("image STATE:", this.state.images);
       });
   };
 
@@ -53,10 +53,10 @@ export default class GetImageForm extends Component {
 
   render() {
     return (
-      <div>
         <div className="center">
+            <h1 className="header">NASA Rover</h1>
           <label htmlFor="rover">Rover</label>
-          <select
+          <select className="mainInput"
             onChange={this.handleRover}
             id="rover"
             value={this.state.value}
@@ -66,7 +66,7 @@ export default class GetImageForm extends Component {
             <option value="Spirit">Spirt</option>
           </select>
           <label htmlFor="camera">Camera Type</label>
-          <select
+          <select className="mainInput"
             onChange={this.handleCamera}
             id="rover"
             value={this.state.value}
@@ -76,7 +76,7 @@ export default class GetImageForm extends Component {
             <option value="navcam">NAVCAM (Navigation Cam)</option>
           </select>
           <label htmlFor="sol">Martian Sol: 1000-2000</label>
-          <input
+          <input className="mainInput"
             type="number"
             onChange={this.handleSol}
             max="2000"
@@ -89,7 +89,6 @@ export default class GetImageForm extends Component {
           />
           <ImageDisplay images={this.state.images} />
         </div>
-      </div>
     );
   }
 }

@@ -5,7 +5,7 @@ export default class ImageDisplay extends Component {
   render() {
     let images = this.props.images.map(e => {
       return (
-          <img class="roverImg" src={e.img_src} alt="rover"/>
+          <img className="roverImg" src={e.img_src} alt="rover"/>
       );
     });
     return (
