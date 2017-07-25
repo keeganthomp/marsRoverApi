@@ -22,3 +22,25 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.center {
+  margin: 0 auto;
+  width: 650px;
+}
+
+.button {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.buttonContainer {
+  width: 300px;
+  margin: 2% auto;
+  text-align: center;
+  
+}
+
+.title {
+  margin: 2%;
+}
+
