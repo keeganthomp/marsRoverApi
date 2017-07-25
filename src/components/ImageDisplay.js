@@ -3,15 +3,29 @@ import "../styles/App.css";
 
 export default class ImageDisplay extends Component {
   render() {
-    let images = this.props.images.map(e => {
+
+      let center = {
+          textAlign: "center"
+      }
+
+    if (this.props.images.length < 1) {
+      return <div style={center}>There are No Images To Display. Please Make a Selection</div>;
+    } else {
+      let images = this.props.images.map(e => {
+        return (
+          <img
+            key={Math.random()}
+            className="roverImg"
+            src={e.img_src}
+            alt="rover"
+          />
+        );
+      });
       return (
-          <img key={Math.random()} className="roverImg" src={e.img_src} alt="rover"/>
+        <div>
+          {images}
+        </div>
       );
-    });
-    return (
-      <div>
-        {images}
-      </div>
-    );
+    }
   }
 }
